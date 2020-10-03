@@ -1,13 +1,22 @@
 <template>
-  <div class="posts-page"></div>
+  <div class="posts-page">
+    <post-list></post-list>
+  </div>
 </template>
 
 <script>
-export default {}
+import PostPreview from '@/components/Posts/PostPreview.vue'
+import PostList from '@/components/Posts/PostList.vue'
+export default {
+  components: {
+    PostPreview,
+    PostList,
+  },
+}
 </script>
 
 <style scoped>
-.post-page {
+.posts-page {
   display: flex;
   justify-content: center;
   align-items: center;
