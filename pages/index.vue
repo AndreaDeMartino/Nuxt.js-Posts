@@ -16,21 +16,21 @@
         id="2"
         thumbnail="https://cdn.pixabay.com/photo/2017/12/26/21/19/tech-3041437_960_720.jpg"
         title="Hi friends"
-        previewText="This is my second post!"
+        previewText="Yeah, this is my second post."
       ></post-preview>
 
       <post-preview
         id="3"
         thumbnail="https://c7.uihere.com/files/792/139/601/circular-technological-background.jpg"
         title="What's Up guys"
-        previewText="This is my third post!"
+        previewText="And This is my third post."
       ></post-preview>
     </section>
   </div>
 </template>
 
 <script>
-import PostPreview from '@/components/posts/PostPreview.vue'
+import PostPreview from '@/components/Posts/PostPreview.vue'
 export default {
   components: {
     PostPreview,
@@ -44,6 +44,7 @@ export default {
   position: relative;
   padding: 30px;
   box-sizing: border-box;
+  background-image: url('~assets/images/main-page-background.jpg');
   background-position: center;
   background-size: cover;
 }
