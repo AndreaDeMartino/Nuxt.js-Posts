@@ -3,8 +3,8 @@
     <section class="post">
       <h1>Title</h1>
       <div class="post-details">
-        <div>Last updated on XXX</div>
-        <div>Written by Name</div>
+        <p>Last updated on Yestrday</p>
+        <p>Written by Andrea</p>
       </div>
       <p>Content of the post</p>
     </section>
@@ -50,6 +50,10 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+p {
+  padding: 10px;
 }
 
 @media (min-width: 768px) {
