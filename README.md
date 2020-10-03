@@ -1,4 +1,4 @@
-# FirstProject
+# Nuxt Js - Posts
 
 ## Build Setup
 
