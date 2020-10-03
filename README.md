@@ -1,4 +1,4 @@
-# Nuxt Js - Posts
+# Nuxt-Posts
 
 ## Build Setup
 
