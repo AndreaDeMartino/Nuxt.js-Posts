@@ -3,7 +3,7 @@
     <section class="intro">
       <h1>Get the latest tech news</h1>
     </section>
-    <post-list></post-list>
+    <post-list :posts="loadedPosts"></post-list>
   </div>
 </template>
 
@@ -15,6 +15,41 @@ export default {
   components: {
     PostPreview,
     PostList,
+  },
+  asyncData(context) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve({
+          loadedPosts: [
+            {
+              id: '1',
+              title: 'Hello There',
+              previewText: 'This is my first post!',
+              thumbnail:
+                'https://ak.picdn.net/shutterstock/videos/14597056/thumb/1.jpg',
+            },
+            {
+              id: '2',
+              title: 'Hi friends',
+              previewText: 'Yeah, this is my second post.',
+              thumbnail:
+                'https://cdn.pixabay.com/photo/2017/12/26/21/19/tech-3041437_960_720.jpg',
+            },
+            {
+              id: '3',
+              title: 'Whats Up guys',
+              previewText: 'And This is my third post.',
+              thumbnail:
+                'https://c7.uihere.com/files/792/139/601/circular-technological-background.jpg',
+            },
+          ],
+        })
+      }, 1000)
+    }).then((data) => {
+          return data
+        }).catch((err) => {
+          context.error(err);
+        })
   },
 }
 </script>
